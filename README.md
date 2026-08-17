@@ -1,25 +1,25 @@
 # 📉 Telecom Customer Churn Prediction & MLOps Pipeline
 
-Pipeline end-to-end de Machine Learning enfocado en la detección temprana de cancelación de clientes (*Churn*) en telecomunicaciones, priorizando la optimización del impacto de negocio y el seguimiento de experimentos con MLflow.
+End-to-end Machine Learning pipeline focused on the early detection of customer cancellation (Churn) in telecommunications, prioritizing the optimization of business impact and experiment tracking with MLflow.
 
-## 🎯 Resultados Clave & Criterio de Selección
+## 🎯 Key Results & Selection Criteria
 
-Se evaluó el rendimiento de los modelos frente al desbalance de clases (~26.5% de Churn). A pesar de que **Random Forest** obtuvo un mayor *Accuracy* general (79%), se seleccionó **Regresión Logística con balanceo de pesos** por maximizar la captura real de clientes en riesgo (**Recall** y **ROC-AUC**).
+Model performance was evaluated against class imbalance (~26.5% Churn). Although Random Forest achieved a higher overall Accuracy (79%), **Logistic Regression with class weight balancing** was selected for maximizing the actual capture of at-risk customers (Recall and ROC-AUC).
 
-| Modelo | ROC-AUC | Recall (Churn) | Precision (Churn) | Impacto de Negocio |
+| Model | ROC-AUC | Recall (Churn) | Precision (Churn) | Business Impact |
 | :--- | :---: | :---: | :---: | :--- |
-| **Logistic Regression (Balanced)** | **0.8420** | **79%** | 51% | **Identifica a 295 de 374 clientes en riesgo** |
-| Random Forest (Balanced) | 0.8209 | 49% | 63% | Deja escapar al 51% de los clientes que cancelan |
+| **Logistic Regression (Balanced)** | 0.8420 | 79% | 51% | Identifies 295 out of 374 at-risk customers |
+| **Random Forest (Balanced)** | 0.8209 | 49% | 63% | Misses 51% of churning customers |
 
-## 💡 Drivers Principales de Cancelación (SHAP Values)
+## 💡 Main Churn Drivers (SHAP Values)
 
-1. **Antigüedad (`tenure`):** La ventana crítica de abandono se concentra en los primeros 12 meses de contrato.
-2. **Modalidad de Contratación:** Los acuerdos a 1 y 2 años actúan como el principal factor de retención.
-3. **Servicios de Valor Agregado:** Clientes con *Online Security* y *Tech Support* presentan significativamente menor tasa de baja.
+* **Tenure:** The critical drop-off window is concentrated in the first 12 months of the contract.
+* **Contract Type:** 1-year and 2-year contracts act as the main retention factor.
+* **Value-Added Services:** Customers with *Online Security* and *Tech Support* show a significantly lower churn rate.
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
 * **MLOps & Tracking:** MLflow
-* **Modelado & Métricas:** Scikit-Learn
-* **Explicabilidad:** SHAP (SHapley Additive exPlanations)
-* **Procesamiento & Análisis:** Python, Pandas, Seaborn
+* **Modeling & Metrics:** Scikit-Learn
+* **Explainability:** SHAP (SHapley Additive exPlanations)
+* **Processing & Analysis:** Python, Pandas, Seaborn
