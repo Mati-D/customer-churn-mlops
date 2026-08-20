@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1520869562399-e772f042f422?q=80&w=1920&auto=format&fit=crop" width="100%" style="border-radius: 8px;" alt="Telecom Banner">
+</p>
+
 # 📉 Telecom Customer Churn Prediction & MLOps Pipeline
 
 End-to-end Machine Learning pipeline focused on the early detection of customer cancellation (Churn) in telecommunications, prioritizing the optimization of business impact and experiment tracking with MLflow.
